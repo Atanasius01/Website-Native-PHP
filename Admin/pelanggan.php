@@ -2,12 +2,12 @@
 // include_once 'top.php';
 // include_once 'menu.php';
 
-$model = new JenisProduk();
-$jenis_produk = $model->JenisProduk();
+$model = new Pelanggan();
+$data_pelanggan = $model->Pelanggan();
 
 
 ?>
-                        <h1 class="mt-4">Tabel Jenis Produk</h1>
+                        <h1 class="mt-4">Tabel Pelanggan</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>
@@ -29,28 +29,46 @@ $jenis_produk = $model->JenisProduk();
                                     <thead>
                                         <tr>
                                         <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Keterangan</th>
+                                        <th>Kode</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Tempat Lahir</th>
+                                            <th>Tanggal Lahir</th>
+                                            <th>Email</th>
+                                            <th>Kartu Id</th>
+                                            <th>Alamat</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                         <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Keterangan</th>
+                                        <th>Kode</th>
+                                            <th>Nama Pelanggan</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Tempat Lahir</th>
+                                            <th>Tanggal Lahir</th>
+                                            <th>Email</th>
+                                            <th>Kartu Id</th>
+                                            <th>Alamat</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach($jenis_produk as $row){
+                                    foreach($data_pelanggan as $row){
 
                                     
                                     ?>
                                         <tr>
                                             <td><?= $no ?></td>
-                                            <td><?= $row['nama']?></td>
-                                            <td><?= $row['ket']?></td>
+                                            <td><?= $row['kode']?></td>
+                                            <td><?= $row['nama_pelanggan']?></td>
+                                            <td><?= $row['jk']?></td>
+                                            <td><?= $row['tmp_lahir']?></td>
+                                            <td><?= $row['tgl_lahir']?></td>
+                                            <td><?= $row['email']?></td>
+                                            <td><?= $row['kartu_id']?></td>
+                                            <td><?= $row['alamat']?></td>
                                         </tr>
                                         <?php
                                         $no++;

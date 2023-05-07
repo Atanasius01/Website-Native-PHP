@@ -2,12 +2,12 @@
 // include_once 'top.php';
 // include_once 'menu.php';
 
-$model = new JenisProduk();
-$jenis_produk = $model->JenisProduk();
+$model = new Kartu();
+$data_kartu = $model->Kartu();
 
 
 ?>
-                        <h1 class="mt-4">Tabel Jenis Produk</h1>
+                        <h1 class="mt-4">Tabel Kartu</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>
@@ -29,28 +29,34 @@ $jenis_produk = $model->JenisProduk();
                                     <thead>
                                         <tr>
                                         <th>No</th>
+                                        <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>Keterangan</th>
+                                            <th>Diskon</th>
+                                            <th>Iuran</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                         <th>No</th>
+                                        <th>Kode</th>
                                             <th>Nama</th>
-                                            <th>Keterangan</th>
+                                            <th>Diskon</th>
+                                            <th>Iuran</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach($jenis_produk as $row){
+                                    foreach($data_kartu as $row){
 
                                     
                                     ?>
                                         <tr>
                                             <td><?= $no ?></td>
+                                            <td><?= $row['kode']?></td>
                                             <td><?= $row['nama']?></td>
-                                            <td><?= $row['ket']?></td>
+                                            <td><?= $row['diskon']?></td>
+                                            <td><?= $row['iuran']?></td>
                                         </tr>
                                         <?php
                                         $no++;

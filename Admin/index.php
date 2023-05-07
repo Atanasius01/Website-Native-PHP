@@ -1,7 +1,9 @@
 <?php
 include_once 'top.php';
-
+include_once 'koneksi.php';
 include_once 'menu.php';
+include_once 'models/Produk.php';
+include_once 'models/Jenis_produk.php';
 
 
 ?>

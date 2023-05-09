@@ -27,7 +27,7 @@ $tombol = $_REQUEST['proses'];
 switch($tombol){
     case 'simpan':$model->simpan($data); break;
     case 'ubah' :
-        $data[] = $_POST['id']; $model=>ubah($data);break;
+        $data[] = $_POST['id']; $model->ubah($data);break;
     default:
     header('Location:index.php?url=produk');
     break;

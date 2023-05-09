@@ -88,7 +88,7 @@ $data_produk = $model->dataProduk();
                                 </table>
                             </div>
                             </div>
-                            </div>
+
 
 <?php
 include_once 'bottom.php';

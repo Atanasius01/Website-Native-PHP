@@ -23,7 +23,7 @@ $data_pesanan = $model->Pesanan();
                             <div class="card-header">
                                 <!-- <i class="fas fa-table me-1"></i>
                                 DataTable Example -->
-                                <a href="index.php?url=produk_form" class="btn btn-primary btn-sm">Tambah</a>
+                                <a href="index.php?url=pesanan_form" class="btn btn-primary btn-sm">Tambah</a>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -58,11 +58,11 @@ $data_pesanan = $model->Pesanan();
                                             <td><?= $row['total']?></td>
                                             <td><?= $row['pelanggan_id']?></td>
                                             <td>
-                                                <form acion="pesanan_controler.php" method="POST">
+                                                <form action="pesanan_controler.php" method="POST">
                                                     <a href="index.php?url=pesanan_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-                                                    <a href="" class="btn btn-warning btn-sm">Ubah</a>
-                                                    <a href="" class="btn btn-danger btn-sm">Hapus</a>
-                                                    <input type="hidden" name="idx" value="<?= $row[$id] ?>">
+                                                    <a href="index.php?url=pesanan_form&idedit=<?= $row['id']?>" class="btn btn-warning btn-sm">Ubah</a>
+                                                    <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus">Hapus</button>
+                                                    <input type="hidden" name="idx" value="<?= $row['id'] ?>">
                                                 </form>
                                             </td>
                                         </tr>

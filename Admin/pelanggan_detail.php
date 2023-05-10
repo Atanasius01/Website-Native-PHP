@@ -6,7 +6,7 @@ $pelanggan = $model->getPelanggan($id);
 ?>
 
 
-<h1 class="mt-4">Tabel Pelanggan</h1>
+<h1 class="mt-4">Detail Pelanggan</h1>
 <div class="card-body">
     <div class="card mb-4">
                                 <table id="datatablesSimple">

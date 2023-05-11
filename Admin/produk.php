@@ -7,7 +7,8 @@ $data_produk = $model->dataProduk();
 // foreach($data_produk as $row){
 //     print $row['kode'];
 // }
-
+$sesi = $_SESSION['MEMBER'];
+if(isset($sesi)){
 ?>
                         <h1 class="mt-4">Tabel Product</h1>
                         <ol class="breadcrumb mb-4">
@@ -75,9 +76,14 @@ $data_produk = $model->dataProduk();
                                                 <form action="produk_controler.php" method="POST">
                                                     <a href="index.php?url=produk_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
                                                     <a href="index.php?url=produk_form&idedit=<?= $row['id']?>" class="btn btn-warning btn-sm">Ubah</a>
+                                                    <?php
+                                                    if($sesi['role'] != 'staff'){
+                                                        ?>
+                                                    
                                                     <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus">Hapus</button>
 
                                                     <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                                                    <?php } ?>
                                                 </form>
                                             </td>
                                         </tr>
@@ -93,5 +99,9 @@ $data_produk = $model->dataProduk();
 
 <?php
 include_once 'bottom.php';
+
+}else{
+    echo '<script> alert("anda tidak boleh masuk");history.back();</script>';
+}
 
 ?>

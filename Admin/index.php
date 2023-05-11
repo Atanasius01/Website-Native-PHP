@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'top.php';
 include_once 'koneksi.php';
 include_once 'menu.php';
@@ -7,7 +8,7 @@ include_once 'models/Jenis_produk.php';
 include_once 'models/Kartu.php';
 include_once 'models/Pelanggan.php';
 include_once 'models/Pesanan.php';
-
+include_once 'models/Member.php';
 
 ?>
 <div id="layoutSidenav_content">

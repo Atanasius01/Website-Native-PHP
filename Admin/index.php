@@ -9,6 +9,8 @@ include_once 'models/Kartu.php';
 include_once 'models/Pelanggan.php';
 include_once 'models/Pesanan.php';
 include_once 'models/Member.php';
+$sesi = $_SESSION['MEMBER'];
+if(isset($sesi)){
 
 ?>
 <div id="layoutSidenav_content">
@@ -33,4 +35,7 @@ include_once 'models/Member.php';
 
 <?php
 include_once 'bottom.php';
+}else{
+    echo '<script> alert("anda tidak boleh masuk");history.back();</script>';
+}
 ?>

@@ -23,7 +23,11 @@ $data_pesanan = $model->Pesanan();
                             <div class="card-header">
                                 <!-- <i class="fas fa-table me-1"></i>
                                 DataTable Example -->
+                                <?php
+                                  if($sesi['role'] != 'staff'){
+                                      ?>
                                 <a href="index.php?url=pesanan_form" class="btn btn-primary btn-sm">Tambah</a>
+                                <?php } ?>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -60,9 +64,13 @@ $data_pesanan = $model->Pesanan();
                                             <td>
                                                 <form action="pesanan_controler.php" method="POST">
                                                     <a href="index.php?url=pesanan_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                                                    <?php
+                                                    if($sesi['role'] == 'admin'){
+                                                        ?>
                                                     <a href="index.php?url=pesanan_form&idedit=<?= $row['id']?>" class="btn btn-warning btn-sm">Ubah</a>
                                                     <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus">Hapus</button>
                                                     <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                                                    <?php }?>
                                                 </form>
                                             </td>
                                         </tr>

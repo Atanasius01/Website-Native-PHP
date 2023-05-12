@@ -18,13 +18,13 @@
   <div class="form-group row">
     <label for="text" class="col-4 col-form-label">Username</label> 
     <div class="col-8"> 
-      <input id="username" name="username" type="text" class="form-control">
+      <input id="text" name="username" type="text" class="form-control">
     </div>
   </div>
   <div class="form-group row">
     <label for="text1" class="col-4 col-form-label">Password</label> 
     <div class="col-8">
-      <input id="password" name="password" type="password" class="form-control">
+      <input id="text" name="password" type="password" class="form-control">
     </div>
   </div> 
   <div class="form-group row">

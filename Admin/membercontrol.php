@@ -15,7 +15,7 @@ $model = new Member();
 $rs = $model->cekLogin($data);
 if(!empty($rs)){
     $_SESSION['MEMBER'] = $rs;
-    header('Location:index.php?url=produk');
+    header('Location:http://localhost/WEB%20Native/admin/index.php?url=produk');
 }
 else{
     echo '<script> alert("user/password anda salah");history.back();</script>';
